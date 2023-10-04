@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio js </title>
+</head>
+
+<body>
+
+    <h1>Js desafio</h1>
+
+    <script>
+
+        (function () {
+
+            var nome = prompt('qual seu nome?');
+
+            ultimoNome(nome);
+            function ultimoNome(nome) {
+                var pos = nome.lastIndexOf(" ") + 1;
+                var ultimo = nome.substring(pos);
+                var primeiros = nome.substring(0, pos);
+
+
+                console.log('Bem vindo ' + ultimo + ',' + primeiros + '!!')
+            };
+
+
+
+        })();
+
+    </script>
+
+</body>
+
+</html>

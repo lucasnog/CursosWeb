@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso +praTi - Calcualadora</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+
+    <script>
+
+
+        function selecionarOp(opMatematico) {
+            var opMatematico = prompt('Entre com uma letra para escolher a operação matemática: (a)dição, (s)ubtração, (m)ultiplicação ou (d)ivisão.')
+
+            if (opMatematico == 'a' || opMatematico == 's' || opMatematico == 'm' || opMatematico == 'd') {
+                var num1 = parseInt(prompt('Insira o primeiro numero'));
+                var num2 = parseInt(prompt('Insira o segundo numero'));
+
+                switch (opMatematico) {
+                    case 'a': resultado = (num1 + num2);
+                        break;
+                    case 's': resultado = (num1 - num2);
+                        break;
+                    case 'm': resultado = (num1 * num2);
+                        break;
+                    case 'd': resultado = (num1 / num2);
+                        break;
+                };
+
+                alert('O resultado é: ' + resultado);
+            } else {
+                alert('Operação inválida.');
+                selecionarOp();
+            }
+        }
+        selecionarOp();
+
+    </script>
+
+</body>
+
+</html>

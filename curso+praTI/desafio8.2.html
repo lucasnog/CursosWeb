@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cálculo do Fatorial - curso +praTi</title>
+</head>
+
+<body>
+    <script>
+        var fatorial = 1;
+        var num1 = parseInt(prompt('Digite um numero inteiro para o fatorial.'));
+        var aux = num1;
+        while (num1 > 1) {
+
+            fatorial = num1 * fatorial;
+            num1--;
+        }
+        alert('O fatorial de ' + aux + ' é: ' + fatorial + '.');
+
+
+
+    </script>
+</body>
+
+</html>

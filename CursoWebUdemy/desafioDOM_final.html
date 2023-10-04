@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio DOM 1</title>
+</head>
+
+<body>
+
+
+
+    <h1>Desafio final DOM js</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, cum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, cum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, cum! amet consectetur adipisicing elit.
+        Laboriosam, cum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, cum! amet consectetur adipisicing elit.
+        Laboriosam, cum!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, cum! amet consectetur adipisicing elit.
+        Laboriosam, cum!</p>
+
+    <script>
+
+        var paragrafo = document.querySelectorAll('p');
+        var x = 0;              
+
+        function mudarP() {
+            while (paragrafo[x]) {
+                paragrafo[x].textContent = x + ' - olá mundo';
+                x++;
+            };
+        };
+
+
+    </script>
+</body>
+
+</html>

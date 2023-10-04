@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        var n1, n2, n3, n4, n5;
+
+        function desafio1() {
+            var x = prompt('digite um numero de 2 a 5');
+            if (x < 2 || x > 5 || isNaN(x)) {
+                prompt('Numero inválido!');
+                desafio1();
+            } else {
+                n1 = prompt('Digite o primeiro valor');
+                n2 = prompt('Digite o segundo valor');
+
+                if (x > 2) n3 = prompt('Digite o terceiro valor');
+                if (x > 3) n4 = prompt('Digite o quarto valor');
+                if (x > 4) n5 = prompt('Digite o quinto valor');
+                if (x > 4) alert(n5);
+                if (x > 3) alert(n4);
+                if (x > 2) alert(n3);
+                alert(n2);
+                alert(n1);
+
+            };
+
+        };
+        desafio1();
+    </script>
+</body>
+
+</html>

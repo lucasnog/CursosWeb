@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cálculo do Fatorial - curso +praTi</title>
+</head>
+
+<body>
+    <script>
+
+        while (num1 != 'fim') {
+            var num1 = prompt('Digite um numero inteiro para o fatorial ou digite (fim) para finalizar o programa.');
+            var fatorial = 1;
+            var aux = num1;
+
+            if (num1 !== 'fim') {
+                parseInt(num1);
+                while (num1 > 1) {
+                    fatorial = num1 * fatorial;
+                    num1--;
+                }
+                alert('O fatorial de ' + aux + ' é: ' + fatorial + '.');
+            } else {
+                alert('Finalizando programa.')
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

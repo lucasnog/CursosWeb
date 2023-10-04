@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar canetas</title>
+</head>
+
+<body>
+
+
+    <h1>Js - Cadastro de canetas</h1>
+
+    <div id="output"></div>
+
+    <script>
+
+        var caneta = new Caneta()
+
+
+        function Caneta(preco, cor) {
+            this.preco = preco || 1;
+            this.color = cor || 'preto';
+            this.mudarCor = function (cor) {
+                this.color = cor;
+            }
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

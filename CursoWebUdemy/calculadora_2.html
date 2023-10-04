@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="estilo.css"> -->
+    <title>Oi meu chapa</title>
+</head>
+
+<body>
+
+    <h1>Logica de programação JS</h1>
+
+    <button onclick="iniciarCalc('+')">+</button>
+    <button onclick="iniciarCalc('-')">-</button>
+    <button onclick="iniciarCalc('*')">*</button>
+    <button onclick="iniciarCalc('/')">/</button>
+
+    <div class="output"></div>
+
+    <script>
+
+        var n1 = parseFloat(prompt("Digite um numero"));
+
+        escreve(n1);
+
+        function escreve(mensagem) {
+            var output = document.querySelector(".output");
+            output.innerHTML = mensagem;
+        }
+
+        function iniciarCalc(simbolo) {
+            n1 = parseFloat(document.querySelector('.output').textContent);
+            var n2 = parseFloat(prompt("Digite o numero:"));
+            var msg = calcular(simbolo, n1, n2);
+            escreve(msg);
+
+        }
+
+
+        numeroCalc = document.querySelector('.output').textContent;
+
+
+        function calcular(simbolo, n1, n2) {
+            var numeroCalc = 0;
+
+            switch (simbolo) {
+                case '+':
+                    numeroCalc = n1 + n2;
+                    break;
+                case '-':
+                    numeroCalc = n1 - n2;
+                    break;
+                case '*':
+                    numeroCalc = n1 * n2;
+                    break;
+                case '/':
+                    numeroCalc = n1 / n2;
+                    break;
+            }
+
+            return numeroCalc;
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

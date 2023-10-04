@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="visor">
+        <div>
+            <input id="iniciar" type="button" value="INICIAR">
+            <input id="parar" type="button" value="PARAR">
+            <input id="restart" type="button" value="RESTART">
+        </div>
+
+
+    </div>
+
+    <script>
+
+
+
+        var $iniciar = document.querySelector('#iniciar');
+        var $parar = document.querySelector('#parar');
+        var $restart = document.querySelector('#restart');
+        var $visor = document.getElementById("visor");
+
+
+        $iniciar.addEventListener("click", start);
+        $parar.addEventListener("click", parar);
+        $restart.addEventListener("click", restart);
+
+        var visor = 0;
+        var horaStart = 0;
+        var rodando = false;
+        var tempoDecorrido = 0;
+        var tempoVisor = 0;
+        var m = 0;
+        var s = 0;
+        var ms = 0;
+
+
+
+        function mostrarVisor(hora) {
+            visor = setInterval(() => {
+                tempoVisor = Date.now() - hora + tempoDecorrido;
+                if (tempoVisor < 1000) {
+                    $visor.value = m + ':' + s + ':' + tempoVisor;
+                } else if (tempoVisor <= 60000) {
+                    s = parseInt(tempoVisor / 1000);
+                    $visor.value = m + ':' + s + ':' + (tempoVisor - s * 1000);
+                } else {
+
+                    m = parseInt(tempoVisor / 60000)
+                    s = parseInt((tempoVisor / 1000) - (m * 60));
+                    $visor.value = m + ':' + s + ':' + (tempoVisor - (s * 1000) - (m * 60000));
+                }
+            }, 100);
+
+
+        };
+
+        function start() {
+            if (rodando == false && !$visor.value) {
+                rodando = true;
+                horaStart = Date.now();
+                mostrarVisor(horaStart);
+            } else { return };
+        };
+
+        function parar() {
+            if (rodando == true) {
+                rodando = false;
+                tempoDecorrido = tempoVisor;
+                clearInterval(visor);
+            } else if ($visor.value) {
+                rodando = true;
+                horaStart = Date.now();
+                mostrarVisor(horaStart);
+            };
+
+        };
+
+        function restart() {
+            clearInterval(visor);
+            visor = 0;
+            horaStart = 0;
+            rodando = false;
+            tempoDecorrido = 0;
+            tempoVisor = 0;
+            $visor.value = '';
+            m = 0;
+            s = 0;
+            ms = 0;
+
+        };
+
+    </script>
+</body>
+
+</html>

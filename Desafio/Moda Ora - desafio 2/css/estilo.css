@@ -1,0 +1,76 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+header nav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: #162028;
+    
+
+}
+
+header .logo {
+    display: inline-block;
+    margin-left: 5em;
+    color: white;
+    min-width: 5em;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 3em;
+    margin: 1em 4em;
+    align-items: center;
+
+}
+
+header li {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #425564
+}
+header img {
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .principal-content h1 {
+    text-align: center;
+    margin: 4em 0 2em;
+}
+
+section .principal-content p {
+    text-align: center;
+    width: 60vw;;
+}
+
+.cards {
+    display:flex;
+    gap: 2em;
+    margin: 3em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card h3 {
+    margin: 1em;
+}
+
+.card p {
+    margin: 0; 
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Encontrar o Maior e Menor Número - curso +praTi</title>
+</head>
+
+<body>
+    <script>
+        var numMaior, numMenor, numNovo;
+        numNovo = (prompt('Digite um novo número ou digite (fim) para finalizar o programa'));
+        numMenor = numNovo;
+        numMaior = numNovo;
+        if (numNovo == 'fim') {
+            alert('Finalizando programa.')
+        } else {
+            numNovo = parseInt(numNovo);
+            while (numNovo != 'fim') {
+                numNovo = prompt('Digite um novo número ou digite (fim) para finalizar o programa');
+                if (numNovo == 'fim') {
+                    alert('Finalizando programa. O maior número digitado foi: ' + numMaior + '. O menor: ' + numMenor)
+                } else {
+                    numNovo = parseInt(numNovo);
+                    if (numNovo > numMaior) {
+                        numMaior = numNovo;
+                    } else if (numNovo < numMenor) {
+                        numMenor = numNovo;
+                    }
+                    alert('O maior número digitado é: ' + numMaior + '. O menor: ' + numMenor)
+                }
+
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

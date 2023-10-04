@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios Array - curso +praTi</title>
+</head>
+
+<body>
+    <script>
+
+        var meuArray = [];
+        var ordemErrada = "";
+        var num;
+        while (num != 'fim') {
+            var num = prompt('digite um numero para ser add no Array ou fim para encerrar o programa.');
+            if (num == 'fim') {
+                console.log(meuArray);
+                for (i = meuArray.length - 1; i >= 0; i--) {
+                    if (i == 0) {
+                        ordemErrada += meuArray[i];
+                    } else {
+                        ordemErrada += meuArray[i] + ',';
+                    }
+                }
+                console.log(ordemErrada)
+            } else {
+
+                meuArray[meuArray.length] = num;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio sec 48 curso JS</title>
+
+</head>
+
+<body>
+
+    <div>
+        <h1>Curso JS</h1>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        <p>Lorem, lor sit ametectetur adipisicing elit. Sequi, labore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem, ipsum.</p>
+    </div>
+
+    <script>
+        // ***** jeito q eu fiz.
+        // var $paragrafos = document.querySelectorAll('p');
+
+        // for (var i = 0; i < $paragrafos.length; i++) {
+        //     if ($paragrafos[i].textContent.length > 50) {
+        //         console.log($paragrafos[i].textContent.substring(0, 20) + '...')
+        //     } else console.log($paragrafos[i].textContent);
+        // }
+
+
+
+        // jeito q o curso fez.
+        var $paragrafos = document.querySelectorAll('p');
+
+        for (var i = 0; i < $paragrafos.length; i++) {
+            $paragrafos[i].innerHTML = formatarTexto($paragrafos[i].textContent)
+        }
+
+        function formatarTexto(textoP) {
+            if (textoP.length > 50) {
+                return (textoP.substring(0, 20) + '...');
+            } else return textoP;
+        }
+    </script>
+
+</body>
+
+</html>

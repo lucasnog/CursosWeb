@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios Array - curso +praTi</title>
+</head>
+
+<body>
+    <script>
+        //Nova forma feita apos ver resolução.
+        var meuArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var ordemCerta = meuArray[0];
+        var ordemErrada = meuArray[meuArray.length - 1];
+        for (var i = 1; i < meuArray.length; i++) {
+
+            ordemCerta += "," + meuArray[i];
+
+        }
+        for (var i = (meuArray.length - 2); i >= 0; i--) {
+
+            ordemErrada += "," + meuArray[i];
+
+        }
+        console.log('[' + ordemCerta + ']');
+        console.log('[' + ordemErrada + ']')
+
+
+// forma feita sem olhar a resolução
+// ------------------------------
+        // var meuArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // var ordemCerta = "";
+        // var ordemErrada = "";
+        // for (var i = 0; i < meuArray.length; i++) {
+        //     if (i == (meuArray.length - 1)) {
+        //         ordemCerta += meuArray[i];
+        //     } else {
+        //         ordemCerta += meuArray[i] + ",";
+        //     }
+        // }
+        // for (var i = (meuArray.length - 1); i >= 0; i--) {
+        //     if (i == 0) {
+        //         ordemErrada += meuArray[i];
+        //     } else {
+        //         ordemErrada += meuArray[i] + ",";
+        //     }
+        // }
+        // console.log('[' + ordemCerta + ']');
+        // console.log('[' + ordemErrada + ']')
+//-----------------------------
+
+//forma da resolução
+        // var meuPrimeiroArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // var ordemCerta = "";
+        // var ordemErrada = "";
+        // ordemCerta = meuPrimeiroArray[0];
+        // for (var i = 1; i < meuPrimeiroArray.length; i++) {
+        //     ordemCerta += "," + meuPrimeiroArray[i];
+        // }
+        // ordemErrada = meuPrimeiroArray[meuPrimeiroArray.length - 1];
+        // for (var i = meuPrimeiroArray.length - 2; i >= 0; i--) {
+        //     ordemErrada += "," + meuPrimeiroArray[i];
+        // }
+        // console.log(ordemCerta);
+        // console.log(ordemErrada);
+
+    </script>
+</body>
+
+</html>

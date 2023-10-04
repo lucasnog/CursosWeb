@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso +praTi - Calcualadora</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+
+    <script>
+
+        var num1, num2;
+        var resultado = 0;
+
+        while (opMatematico != 'f') {
+
+            var opMatematico = prompt('Entre com uma letra para escolher a operação matemática: (a)dição, (s)ubtração, (m)ultiplicação, (d)ivisão ou (f)im das operações.')
+            if (opMatematico != 'a' && opMatematico != 's' && opMatematico != 'm' && opMatematico != 'd' && opMatematico != 'f') {
+                alert('Digite uma operação valida.');
+            } else {
+                if (resultado != num1) {
+                    var num1 = parseInt(prompt('Insira o primeiro numero'));
+                    resultado = num1;
+                };
+                if (opMatematico == 'f') alert('O resultado final é: ' + resultado);
+                else {
+                    resultado = num1;
+                    num2 = parseInt(prompt('Insira o proximo numero'));
+
+                    switch (opMatematico) {
+                        case 'a': resultado = resultado + num2;
+                            alert('O resultado é: ' + resultado);
+                            break;
+                        case 's': resultado = resultado - num2;
+                            alert('O resultado é: ' + resultado);
+                            break;
+                        case 'm': resultado = resultado * num2;
+                            alert('O resultado é: ' + resultado);
+                            break;
+                        case 'd': resultado = resultado / num2;
+                            alert('O resultado é: ' + resultado);
+                            break;
+                    };
+                    num1 = resultado;;
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

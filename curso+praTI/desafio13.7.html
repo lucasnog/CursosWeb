@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios Array - curso +praTi</title>
+</head>
+
+<body>
+    <script>
+
+        var meuArray = [];
+        var arrayInvertido = [];
+        var ordemErrada = "";
+        var continuar = true;
+        var numNovo;
+
+        for (i = 0; numNovo != 'fim'; i++) {
+            numNovo = prompt('Digite um novo número do array ou (fim) para encerrar.')
+            if (numNovo != 'fim') {
+                meuArray[i] = numNovo;
+                console.log('O numero ' + numNovo + ' foi adicionado com sucesso na posição ' + i + ' do array.');
+                console.log('O array parcial é: [' + meuArray + ']');
+                console.log('-----------------------------');
+            } else {
+                console.log('O array inverso formado pelos números inseridos é: [' + retornoArr(meuArray) + ']');
+            }
+        }
+
+        function retornoArr(arr) {
+            console.log('Invertendo Array...')
+
+            for (i = arr.length - 1; i >= 0; i--) {
+                arrayInvertido[(arr.length - 1 - i)] = arr[i];
+
+            }
+            return arrayInvertido;
+        }
+    </script>
+</body>
+
+</html>

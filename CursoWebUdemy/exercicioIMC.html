@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            min-height: 100%;
+            height: 100%;
+
+        }
+
+        body {
+            min-height: 99%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .caixa,
+        .main {
+            width: 50%;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Calculo do IMC</h1>
+        <div id="output"></div>
+
+        <div class="caixa">
+            <label id="digitar" for="peso">
+                <p> Peso: </p>
+                <input type="text" id="inputPeso">
+                <p>Altura:</p>
+                <input type="text" id="inputAltura">
+                <input type="submit" onclick="salvarPeso()">
+        </div>
+    </div>
+    </label>
+
+    <script>
+        var aaaaaaaaa = document.qu
+        var output = document.querySelector('#output');
+        var imc;
+        function salvarPeso() {
+            var peso = parseFloat(document.getElementById("inputPeso").value);
+            var altura = parseFloat(document.getElementById("inputAltura").value)
+            console.log("Peso salvo:", peso, altura);
+            imc = peso / (altura ** 2);
+            console.log(imc);
+            return classific(imc);
+        }
+
+
+        function classific(imc) {
+            if (imc <= 16.9) {
+                output.innerHTML = "Muito abaixo do peso";
+                return console.log("Muito abaixo do peso");
+            } else if (imc >= 17 && imc <= 18.4) {
+                output.innerHTML = "Abaixo do peso";
+                return console.log("Abaixo do peso");
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                output.innerHTML = "Peso normal";
+                return console.log("Peso normal");
+            } else if (imc >= 25 && imc <= 29.9) {
+                output.innerHTML = "Acima do peso";
+                return console.log("Acima do peso");
+            } else if (imc >= 30 && imc <= 34.9) {
+                output.innerHTML = "Obesidade 1";
+                return console.log("Obesidade 1");
+            } else if (imc >= 35 && imc <= 40) {
+                output.innerHTML = "Obesidade 2";
+                return console.log("Obesidade 2");
+            } else if (imc > 40) {
+                output.innerHTML = "Gordo pra kralho";
+                return console.log("Gordo pra kralho");
+            }
+
+        };
+
+
+
+    </script>
+</body>
+
+</html>

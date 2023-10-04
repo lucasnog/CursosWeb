@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do IMC - +praTi</title>
+</head>
+
+<body>
+    <h1>Calculo do IMC</h1>
+
+    <script>
+
+
+
+        var peso = prompt('Digite seu peso');
+        var altura = prompt('Digite sua altura');
+        var imc = peso / (altura ** 2);
+        var situacao;
+        console.log(imc);
+
+
+        //MINHA RES
+
+        var peso = prompt('Digite seu peso');
+        var altura = prompt('Digite sua altura');
+        var imc = peso / (altura ** 2);
+        var situacao;
+        console.log(imc);
+
+
+        if (imc < 17) situacao = 'Muito abaixo do peso';
+        else if (17 <= imc && imc < 18.49) { situacao = 'Abaixo do peso'; }
+        else if (18.5 <= imc && imc < 24.99) { situacao = 'Peso normal'; }
+        else if (25 <= imc && imc < 29.99) { situacao = 'Acima do peso'; }
+        else if (30 <= imc && imc < 34.99) { situacao = 'Obesidade I'; }
+        else if (35 <= imc && imc < 39.99) { situacao = 'Obesidade II (severa)'; }
+        else situacao = 'Obesidade III (morbida)';
+
+        alert(situacao);
+
+        //primeira sugestão
+        // if (imc < 17) situacao = 'Muito abaixo do peso';
+        // else {
+        //     if (imc < 18.49) {
+        //         situacao = 'Abaixo do peso';
+        //     } else {
+        //         if (imc < 24.99) {
+        //             situacao = 'Peso normal';
+        //         } else {
+        //             if (imc < 29.99) {
+        //                 situacao = 'Acima do peso';
+        //             } else {
+        //                 if (imc < 34.99) {
+        //                     situacao = 'Obesidade I';
+        //                 } else {
+        //                     if (imc < 39.99) {
+        //                         situacao = 'Obesidade II (severa)';
+        //                     } else situacao = 'Obesidade III (morbida)';
+        //                 }
+
+        //             }
+        //         }
+        //     }
+        // }
+
+        //exercicio proposto para fixação de encadeamento condicional
+
+        // if (17 > imc) situacao = 'Muito abaixo do peso';
+        // else {
+        //     if (18.49 > imc) {
+        //         situacao = 'Abaixo do peso';
+        //     } else {
+        //         if (24.99 > imc) {
+        //             situacao = 'Peso normal';
+        //         } else {
+        //             if (29.99 > imc) {
+        //                 situacao = 'Acima do peso';
+        //             } else {
+        //                 if (34.99 > imc) {
+        //                     situacao = 'Obesidade I';
+        //                 } else {
+        //                     if (39.99 > imc) {
+        //                         situacao = 'Obesidade II (severa)';
+        //                     } else situacao = 'Obesidade III (morbida)';
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // alert(situacao);
+    </script>
+</body>
+
+</html>

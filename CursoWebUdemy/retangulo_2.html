@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <h1>Aula lados retangulo</h1>
+
+    <button onclick="alerta()">Alerta</button>
+    <button onclick="naTela()">Na tela</button>
+
+    <div id="output"></div>
+
+    <script>
+
+
+        function area(a, b) {
+            if (isNaN(b) || isNaN(a)) {
+                throw new Error("Coloque somente numeros.")
+            }
+
+            return ("A área do retangulo é: " + (b * a));
+        };
+
+        function alerta() {
+            var b = parseFloat(prompt("Qual a base do retangulo?"));
+            var a = parseFloat(prompt("Qual a altura do retangulo?"));
+
+            try {
+                alert(area(b, a));
+            } catch (e) {
+                alert(e);
+            };
+
+
+
+
+        };
+
+        function naTela() {
+            var b = parseFloat(prompt("Qual a base do retangulo?"));
+            var a = parseFloat(prompt("Qual a altura do retangulo?"));
+            var output = document.querySelector("#output");
+
+            try {
+                output.innerHTML = (area(a, b));
+            } catch (e) {
+                output.innerHTML = e;
+            };
+
+        };
+
+    </script>
+</body>
+
+</html>

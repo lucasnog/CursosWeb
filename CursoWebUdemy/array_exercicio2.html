@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Curso JS</h1>
+
+    <button onclick="diaHoje()"> que dia é hoje?</button>
+    <div id="output"></div>
+
+    <script>
+        var output = document.querySelector('#output');
+        var dias = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado',];
+
+        var hoje = new Date();
+        var diaSemana = hoje.getDay();
+
+        function diaHoje() {
+            output.innerHTML = dias[diaSemana];
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

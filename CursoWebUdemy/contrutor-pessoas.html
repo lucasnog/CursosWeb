@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoas - array - JS curso</title>
+</head>
+
+<body>
+
+    <h1> Curso JS</h1>
+
+    <script>
+
+
+        var grupo = new Array();
+
+        function Pessoa(nome, sobrenome) {
+            "use strict";
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+            grupo.push(this);
+        }
+
+        var pessoa1 = new Pessoa('lucas', 'Nogueira');
+        var pessoa2 = new Pessoa('maria', 'silva');
+        var pessoa3 = new Pessoa('jose', 'maria');
+
+
+        var i = 0;
+        while (grupo[i]) {
+            console.log(grupo[i].nome + ' ' + grupo[i].sobrenome)
+            i++
+        }
+    </script>
+</body>
+
+</html>

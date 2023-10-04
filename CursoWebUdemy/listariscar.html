@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <style>
+        .marcado {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="inputTxt" type="text">
+    <input id="btn" type="button" value="Enviar"><br>
+    <ul>
+        <li>dsafsdf </li>
+        <li> safd asd fas</li>
+        <li>fas dfas </li>
+    </ul>
+
+    <script>
+        var $inputTxt = document.getElementById('inputTxt');
+        var $btn = document.getElementById('btn');
+        var $ul = document.querySelector('ul');
+        var $lis = $ul.querySelectorAll('li');
+
+
+
+        $btn.addEventListener('click', addNew);
+        $inputTxt.addEventListener('keyup', enter);
+
+
+
+        $ul.addEventListener('click', function (e) {
+            if (e.target.nodeName === 'LI') {
+                riscar(e.target);
+            }
+        });
+
+
+        function enter(e) {
+            if (e.keyCode === 13) {
+                addNew();
+            }
+        };
+
+        function addNew() {
+
+
+            var li = document.createElement('li');
+            var text = document.createTextNode($inputTxt.value);
+
+            li.appendChild(text);
+            $ul.appendChild(li);
+
+            $inputTxt.value = '';
+            $inputTxt.focus();
+
+        }
+
+
+
+        function riscar(li) {
+            if (confirm('deseja confirmar essa ação e deleta a seção: ' + li.textContent + '?')) {
+                li.parentNode.removeChild(li);
+            };
+        };
+
+
+    </script>
+
+</body>
+
+</html>

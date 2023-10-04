@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatar Paragrafos</title>
+</head>
+
+<body>
+    <h1>Penca de pagrafos</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat laborum, ipsa unde nulla deleniti hic, amet
+        quasi, excepturi expedita totam in facere cumque nemo?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat laborum, ipsa unde nulla deleniti hic, amet
+        quasi, excepturi expedita totam in odio nemo?</p>
+    <p>Lorem ipsum, dolor sit odio nemo?</p>
+    <p>Lorem Placeat laborum, ipsa unde nulla deleniti hic, amet quasi, excepturi expedita totam in facere cumque odio
+        nemo?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat laborum, hic, amet quasi, excepturi expedita
+        totam in facere cumque odio nemo?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat laborum, ipsa unde nulla deleniti hic, amet
+        quasi, excepturi expedita totam in facere cumque odio nemo?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing e amet quasi, excepturi expedita totam in facere cumque odio
+        nemo?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat laborum, ipsa unde nulla deleniti hic, amet
+        quasi, excepturi expedita totam in facere cumque odio nemo?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat laborum, ipsa unde nulla deleniti hic, amet
+        quasi, excepturi</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat laborum, ipsa unde nulla deleniti hic, amet
+        quaotam in facere cumque odio nemo?</p>
+
+    <script>
+        const $paragrafo = document.querySelectorAll('p');
+        const tresPontos = (x) => {
+            var aux = x.slice(0, 20).join(' ');
+            return (aux + '...');
+        };
+        var i = 0;
+        while ($paragrafo[i]) {
+            var parte = $paragrafo[i].innerHTML.split(' ');
+            if (parte.length >= 20) {
+                $paragrafo[i].innerHTML = tresPontos(parte);
+            }
+            i++;
+        };
+
+
+
+    </script>
+
+</body>
+
+</html>

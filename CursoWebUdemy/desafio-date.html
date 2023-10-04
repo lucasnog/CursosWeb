@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Date</title>
+</head>
+
+<body>
+    <h1>Data</h1>
+    <script>
+
+        var dataHoje = new Date();
+
+        var dia = dataHoje.getDate();
+        dia = dia < 10 ? '0' + dia : dia;
+        var mes = dataHoje.getMonth();
+        mes = mes < 10 ? '0' + mes : mes;
+        console.log(dia + '/' + mes + '/' + dataHoje.getFullYear())
+
+
+
+    </script>
+</body>
+
+</html>
